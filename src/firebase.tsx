@@ -47,11 +47,20 @@ export const db = getFirestore(app);
 /**
  * 🔹 Obtener todos los documentos de una colección específica
  */
+
+export type Proposta = {
+  id: string;
+  vots: number;
+  si: number;
+  no: number;
+  Text: string;
+};
+
 export async function getCollectionData(collectionName: string) {
   const querySnapshot = await getDocs(collection(db, collectionName));
   return querySnapshot.docs.map((doc) => ({
     id: doc.id,
-    ...doc.data(),
+    ...(doc.data() as Omit<Proposta, 'id'>),
   }));
 }
 
