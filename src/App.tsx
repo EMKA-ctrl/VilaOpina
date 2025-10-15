@@ -1,40 +1,28 @@
 
 import './App.css'
-import {
-  getCollectionData,
-  addDocument,
-  addFieldToDocument,
-  deleteFieldFromDocument,
-  deleteDocument,
-  updateDocument,deleteCollection
-} from "./firebase";
+//import {getCollectionData,addDocument,addFieldToDocument,deleteFieldFromDocument,deleteDocument,updateDocument,deleteCollection} from "./firebase";
 
 
 function App() {
-  let va4r=5;
-
   
-  void function getNumbersProposta(Proposta:string){
-    let response = getCollectionData(Proposta);
-
-
-
-  }
   return (
-    <>
-      <div>
-      <button onClick={()=>{console.log(getCollectionData("Prop1"))}}>Consulta Proposta</button>
-      <button onClick={()=>{console.log(addDocument("Prop1",{"answer": false},"Dni5443214532"))}}>Afegeix Vot a proposta</button>
-      <button onClick={()=>{console.log(addDocument("Prop2",{}))}}>Afegeix Proposta</button>
-      <button onClick={()=>{console.log(deleteCollection("45883264"))}}>Eliminar Proposta</button>
+    <div className="app-container">
+      <main className="maindiv">
+        <p>Contenido principal</p>
+        <div className='TarjaProp'>
+          <h3>Titol Proposta</h3>
+          <p>estadsitiques...</p>
+        </div>
+      </main>
 
-      <p>{va4r}</p>
-      
-      </div>
-
-  
-    </>
-  )
+      <footer className="footer-div">
+        <div className="footer-subdiv">menu1</div>
+        <div className="footer-subdiv">menu2</div>
+        <div className="footer-subdiv">menu3</div>
+      </footer>
+    </div>
+  );
 }
+
 
 export default App

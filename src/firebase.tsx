@@ -1,4 +1,15 @@
 // firebase.tsx
+// usage:
+/*
+<button onClick={()=>{console.log(getCollectionData("Prop1"))}}>Consulta Proposta</button>
+      <button onClick={()=>{console.log(addDocument("Prop1",{"answer": false},"Dni5443214532"))}}>Afegeix Vot a proposta</button>
+      <button onClick={()=>{console.log(addDocument("Prop2",{}))}}>Afegeix Proposta</button>
+      <button onClick={()=>{console.log(deleteCollection("45883264"))}}>Eliminar Proposta</button>
+*/
+
+
+
+
 import { initializeApp, getApps, getApp } from "firebase/app";
 import {
   getFirestore,
