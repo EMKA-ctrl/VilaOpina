@@ -1,12 +1,4 @@
-
 @media (max-width:768px){
-    .maindiv {
-      border: 0px solid blue;
-      
-      text-align: center;
-      background-color: #f3f3f3;
-      height: 92vh; /* el resto de la pantalla */
-    }
     h2{
         font-weight: 400;
     }
@@ -18,8 +10,5 @@
         align-items: center;
         justify-content: center;
     }
-    canvas{
-        margin-top: 1%;
-        height: 40px;
-    }
+    
 }

@@ -24,8 +24,8 @@ function App() {
 
 
         <footer className="footer-div">
-          <Link className="footer-subdiv" to="/"><img className='footerLogo' src={logoHome}></img></Link>
-          <Link className="footer-subdiv" to="/my_propostes"><img src={logoAdd}></img></Link>
+          <Link className="footer-subdiv_l" to="/"><img className='footerLogo' src={logoHome}></img></Link>
+          <Link className="footer-subdiv_r" to="/my_propostes"><img src={logoAdd}></img></Link>
         </footer>
       </div>
     </Router>
