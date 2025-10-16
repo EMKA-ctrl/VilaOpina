@@ -1,6 +1,6 @@
 import './Home.css'
 import { useState } from 'react';
-import {type Proposta,getCollectionData,addDocument,addFieldToDocument,deleteFieldFromDocument,deleteDocument,updateDocument,deleteCollection} from "./firebase";
+import {type Proposta,getCollectionData} from "./firebase";
 
 
 function Home() {

@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import {type Proposta,getCollectionData,addDocument,addFieldToDocument,deleteFieldFromDocument,deleteDocument,updateDocument,deleteCollection} from "./firebase";
+import {addDocument} from "./firebase";
 
 
 function MyPropostes() {

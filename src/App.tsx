@@ -1,11 +1,10 @@
 
 import './App.css'
-import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import {type Proposta,getCollectionData,addDocument,addFieldToDocument,deleteFieldFromDocument,deleteDocument,updateDocument,deleteCollection} from "./firebase";
 
-import Home from './home'
-import MyPropostes from './Mypropostes';
+
+import Home from './Home'
+import MyPropostes from './MyPropostes';
 
 import logoHome from './assets/home.png'
 import logoAdd from './assets/add.png'
