@@ -1,43 +1,37 @@
 
 import './App.css'
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import {type Proposta,getCollectionData,addDocument,addFieldToDocument,deleteFieldFromDocument,deleteDocument,updateDocument,deleteCollection} from "./firebase";
+
+import Home from './home'
+import MyPropostes from './Mypropostes';
+
+import logoHome from './assets/home.png'
+import logoAdd from './assets/add.png'
 
 
 function App() {
-  const [listProps, setListProps] = useState<Proposta[]>([]);
-
-  async function llistaProps() {
-    const response = await getCollectionData("Propostes") as Proposta[];
-
-    // Ordenamos de mayor a menor según 'vots'
-    response.sort((a, b) => b.vots - a.vots);
-
-    setListProps(response);
-  }
+  
 
   return (
-    <div className="app-container">
-      <main className="maindiv">
-        <p>Propostes Destacades</p>
+    <Router>
+      <div className="app-container">
+        
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/my_propostes" element={<MyPropostes/>} />
+          </Routes>
 
-        <button onClick={llistaProps}>Refresh</button>
 
-        {listProps.map((prop) => (
-          <div key={prop.id} className='TarjaProp'>
-            <h3>{prop.Text}</h3>
-            <p>Vots: {prop.vots}</p>
-          </div>
-        ))}
-      </main>
-
-      <footer className="footer-div">
-        <div className="footer-subdiv">menu1</div>
-        <div className="footer-subdiv">menu2</div>
-        <div className="footer-subdiv">menu3</div>
-      </footer>
-    </div>
+        <footer className="footer-div">
+          <Link className="footer-subdiv" to="/"><img className='footerLogo' src={logoHome}></img></Link>
+          <Link className="footer-subdiv" to="/my_propostes"><img src={logoAdd}></img></Link>
+        </footer>
+      </div>
+    </Router>
   );
 }
 
 export default App;
+

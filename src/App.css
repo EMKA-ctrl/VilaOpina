@@ -6,18 +6,14 @@
 
 @media (max-width:768px){
 
-  .app-container {
 
-    
-  }
-
-  .maindiv {
-    border: 2px solid blue;
-    padding: 2rem;
-    text-align: center;
-    background-color: #f3f3f3;
-    min-height: 90vh; /* el resto de la pantalla */
-  }
+    .maindiv {
+      border: 2px solid blue;
+      padding: 2rem;
+      text-align: center;
+      background-color: #f3f3f3;
+      min-height: 92vh; /* el resto de la pantalla */
+    }
 
   .footer-div {
     position: fixed;
@@ -25,13 +21,13 @@
     left: 0;
     right: 0;
     width: 100%;
-    height: 10vh;
+    height: 8vh;
     background-color: #ffffff;
     color: black;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+  }
   .footer-subdiv{
     border: 2px solid blue;
     display: flex;
@@ -45,6 +41,10 @@
     background-color: white;
     border-radius: 10px;
     border: 1px solid rgb(211, 211, 211);
+  }
+  .footerLogo{
+    
+    
   }
 
 

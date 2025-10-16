@@ -1,0 +1,11 @@
+@media (max-widht:768px){
+
+    .maindiv {
+    border: 2px solid blue;
+    padding: 2rem;
+    text-align: center;
+    background-color: #f3f3f3;
+    min-height: 92vh; /* el resto de la pantalla */
+    }
+
+}

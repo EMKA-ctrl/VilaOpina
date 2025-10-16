@@ -68,14 +68,23 @@ export async function getCollectionData(collectionName: string) {
  * 🔹 Agregar un documento a una colección (la crea si no existe)
  */
 export async function addDocument(collectionName: string, data: object,docId?: string) {
-  if (docId) {
-    const docRef = doc(db, collectionName, docId);
-    await setDoc(docRef, data);
-    return { id: docId, ...data };
-  } else {
-    const docRef = await addDoc(collection(db, collectionName), data);
-    return { id: docRef.id, ...data };
+  
+  try{
+      if (docId) {
+      const docRef = doc(db, collectionName, docId);
+      await setDoc(docRef, data);
+      return { id: docId, ...data };
+    } else {
+      const docRef = await addDoc(collection(db, collectionName), data);
+      return { id: docRef.id, ...data };
+    }
   }
+  catch (error) {
+    console.error(`Error adding document to "${collectionName}":`, error);
+    throw error; // let the caller handle it
+  }
+  
+  
 
 
 }
