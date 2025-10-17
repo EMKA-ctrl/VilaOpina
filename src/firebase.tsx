@@ -7,9 +7,6 @@
       <button onClick={()=>{console.log(deleteCollection("45883264"))}}>Eliminar Proposta</button>
 */
 
-
-
-
 import { initializeApp, getApps, getApp } from "firebase/app";
 import {
   getFirestore,
@@ -22,6 +19,14 @@ import {
   deleteField,
   deleteDoc,
 } from "firebase/firestore";
+
+export type Proposta = {
+  id: string;
+  vots: number;
+  si: number;
+  no: number;
+  Text: string;
+};
 
 // 🔧 Configuración de Firebase
 const firebaseConfig = {
@@ -48,13 +53,7 @@ export const db = getFirestore(app);
  * 🔹 Obtener todos los documentos de una colección específica
  */
 
-export type Proposta = {
-  id: string;
-  vots: number;
-  si: number;
-  no: number;
-  Text: string;
-};
+
 
 export async function getCollectionData(collectionName: string) {
   const querySnapshot = await getDocs(collection(db, collectionName));
