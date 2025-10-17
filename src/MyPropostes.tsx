@@ -1,5 +1,5 @@
 import './MyPropostes.css'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {addDocument,type Proposta,getCollectionData} from "./firebase";
 import sendLogo from './assets/send.png'
 import Button from '@mui/joy/Button';
@@ -20,6 +20,8 @@ function MyPropostes() {
       addDocument(proposta,{})
       addDocument("Propostes",{Text:proposta,no:0,si:0,vots:0,creator:'DNI'})
     };
+    useEffect(() => {llistaProps();}, []);
+    
 
     async function llistaProps() {
         const response = await getCollectionData("Propostes") as Proposta[];
