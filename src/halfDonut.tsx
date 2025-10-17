@@ -8,7 +8,8 @@ function SemiDonut(){
             height={300}
             series={[
                 {
-                data: [{ id: 0, value: 50, color: 'green' },{ id: 1, value: 50, color: 'red' }],
+                data: [{ id: 0, value: 80, color: 'green' },{ id: 1, value: 20, color: 'red' }],
+                arcLabel:'value',
                 innerRadius: 30,
                 outerRadius: 100,
                 paddingAngle: 3,

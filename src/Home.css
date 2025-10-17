@@ -31,9 +31,17 @@
         justify-content: center;
     }
     .graph{
-        margin-top: 5%;
-        border: 2px solid black;
+        margin-top: -20%;
+        border: 0px solid black;
+        height: 25vh;
         
+    }
+    .infoVots{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3%;
+        margin-top: -10%;
     }
 
 }

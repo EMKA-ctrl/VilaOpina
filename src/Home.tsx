@@ -3,7 +3,6 @@ import { useState,useEffect } from 'react';
 import {type Proposta,getCollectionData} from "./firebase";
 import logoRefresh from './assets/refreshicon.png'
 import SemiDonut from './halfDonut'
-import { PieChart } from '@mui/x-charts/PieChart';
 
 
 function Home() {
@@ -35,11 +34,12 @@ function Home() {
           {listProps.map((prop) => (
             <div key={prop.id} className='TarjaProp'>
               <h3>{prop.Text}</h3>
-
               <div className='graph'><SemiDonut ></SemiDonut></div>
-              <p>Vots: {prop.vots}</p>
-              <p>a favor: {prop.si}</p>
-               <p>en contra: {prop.no}</p>
+              <div className='infoVots'>
+                <p>Vots : {prop.vots}</p>
+                <p>Si: {prop.si}</p>
+                <p>No: {prop.no}</p>
+               </div>
             </div>
           ))}
         </div>

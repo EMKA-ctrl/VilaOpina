@@ -15,7 +15,7 @@ function MyPropostes() {
       console.log("Proposta escrita:", proposta);
       // Aquí podrías llamar a addDocument() o lo que necesites
       addDocument(proposta,{})
-      addDocument("Propostes",{Text:proposta,no:0,si:0,vots:0})
+      addDocument("Propostes",{Text:proposta,no:0,si:0,vots:0,creator:'DNI'})
     };
 
         async function llistaProps() {
