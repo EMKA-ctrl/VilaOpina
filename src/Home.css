@@ -7,7 +7,19 @@
       background-color: #f3f3f3;
       height: 92vh; /* el resto de la pantalla */
     }
+    .refresh{
+        display: flex;
+        height: 100%;
+        
+        width: 50vw;
+        align-items: center;
+        justify-content: center;
+    }
+
     h2{
+        width: 50vw;
+        margin-left: 25vw;
+        
         font-weight: 400;
     }
     .HomeTitle{
@@ -18,8 +30,10 @@
         align-items: center;
         justify-content: center;
     }
-    canvas{
-        margin-top: 1%;
-        height: 40px;
+    .graph{
+        margin-top: 5%;
+        border: 2px solid black;
+        
     }
+
 }
