@@ -34,7 +34,7 @@ function Home() {
           {listProps.map((prop) => (
             <div key={prop.id} className='TarjaProp'>
               <h3>{prop.Text}</h3>
-              <div className='graph'><SemiDonut ></SemiDonut></div>
+              <div className='graph'><SemiDonut  siPercentage={prop.si}  ></SemiDonut></div>
               <div className='infoVots'>
                 <p>Vots : {prop.vots}</p>
                 <p>Si: {prop.si}</p>

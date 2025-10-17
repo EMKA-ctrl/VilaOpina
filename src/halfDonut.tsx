@@ -1,6 +1,10 @@
 import { PieChart } from '@mui/x-charts/PieChart';
+interface SemiDonutProps{
+    siPercentage: number;
+    
+}
 
-function SemiDonut(){
+function SemiDonut({ siPercentage }: SemiDonutProps){
 
     return(
         <PieChart 
@@ -8,10 +12,10 @@ function SemiDonut(){
             height={300}
             series={[
                 {
-                data: [{ id: 0, value: 80, color: 'green' },{ id: 1, value: 20, color: 'red' }],
+                data: [{ id: 0, value: siPercentage, color: 'green' },{ id: 1, value: 100-siPercentage, color: 'red' }],
                 arcLabel:'value',
                 innerRadius: 30,
-                outerRadius: 100,
+                outerRadius: 60,
                 paddingAngle: 3,
                 cornerRadius: 5,
                 startAngle: -90,
