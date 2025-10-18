@@ -24,7 +24,7 @@ function Home() {
         
         <div className="maindiv">
           <div className='HomeTitle'>
-            <h2>Destacades</h2>
+            <h2>Destacades {window.innerWidth} - {window.innerHeight}</h2>
             <div className='refresh' onClick={llistaProps}>
               <img  src={logoRefresh}></img>
             </div>
