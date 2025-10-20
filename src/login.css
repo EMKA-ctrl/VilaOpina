@@ -1,0 +1,18 @@
+@media (max-width:768px){
+
+    .mainContainer{
+    
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .submitArea{
+        border: 1px solid black;
+        width: 80vw;
+        height: fit-content;
+        
+    }
+}
