@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
-const api_key_places = "AIzaSyAMuqh8jO9ReM8ZxoLhn9O0yUBQI_4UEqk";
+
 import usePlacesAutocomplete, { getGeocode, getLatLng } from "use-places-autocomplete";
 import { LoadScript } from '@react-google-maps/api';
 
